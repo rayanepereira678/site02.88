@@ -34,7 +34,7 @@ with col_left:
 
     st.markdown("""
     <div style='margin-bottom:30px; font-size:30px;'>
-        <b>Maria Hillary</b>
+        <b>Rayane</b>
     </div>
     """, unsafe_allow_html=True)
 
