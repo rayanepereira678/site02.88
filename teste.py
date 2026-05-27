@@ -13,8 +13,8 @@ def get_base64_image(path):
     return None
 
 # IMAGENS
-img_base64 = get_base64_image("empresa.png")
-zap_base64 = get_base64_image("zap.png")
+img_base64 = get_base64_image("netflix.png")
+zap_base64 = get_base64_image("whatsapp.png")
 
 # TOPO
 col1, col2, col3 = st.columns([1,2,1])
@@ -34,8 +34,6 @@ with col2:
             </a>
         </div>
         """, unsafe_allow_html=True)
-    else:
-        st.warning("empresa.png não encontrada")
 
 # LINHA
 st.markdown("---")
@@ -45,17 +43,12 @@ col_left, col_right = st.columns([3,1])
 
 with col_left:
 
-    # NOME
     st.markdown("""
-    <h1 style="
-        color:#222;
-        margin-bottom:30px;
-    ">
+    <h1 style="color:#222;">
     Rayane
     </h1>
     """, unsafe_allow_html=True)
 
-    # SUBCOLUNAS
     sub1, sub2 = st.columns([1,3])
 
     # FOTO PERFIL
@@ -63,8 +56,6 @@ with col_left:
 
         if os.path.exists("foto 88.png"):
             st.image("foto 88.png", width=250)
-        else:
-            st.warning("foto 88.png não encontrada")
 
     # TEXTO
     with sub2:
@@ -81,23 +72,16 @@ with col_left:
 
         Rayane é estudante do Ensino Médio no IFPB Campus Itabaiana,
         dedicada aos estudos e interessada em tecnologia.
-        Ama aprender coisas novas e desenvolver projetos criativos.
 
         </div>
         """, unsafe_allow_html=True)
 
-    st.write("")
-
-    # BOTÃO NETFLIX
     st.link_button(
         "🎬 Visitar Site da Netflix",
         "https://www.netflix.com/br/"
     )
 
 # WHATSAPP
-st.write("")
-st.write("")
-
 if zap_base64:
     st.markdown(f"""
     <div style="text-align:center; margin-top:30px;">
@@ -111,5 +95,3 @@ if zap_base64:
 
     </div>
     """, unsafe_allow_html=True)
-else:
-    st.warning("zap.png não encontrada")
