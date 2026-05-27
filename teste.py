@@ -10,8 +10,7 @@ def get_base64_image(path):
         return base64.b64encode(img_file.read()).decode()
 
 # IMAGENS DO REPOSITÓRIO
-img_base64 = get_base64_image("FOTO.EMPRESA.webp")
-zap_base64 = get_base64_image("ZAP.png")
+
 
 # TOPO (imagem clicável)
 col1, col2, col3 = st.columns([1, 2, 1])
